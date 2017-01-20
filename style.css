@@ -30,6 +30,7 @@
 .suggestions-list .suggestions-item {
 	list-style-type: none;
 	text-align: left;
+	border: 1px solid green;
 }
 
 .results-area {
