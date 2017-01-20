@@ -1,0 +1,52 @@
+.header {
+	border: 1px solid black;
+	width: 40rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.search-wrapper {
+	width: 400px;
+	border: 1px solid blue;
+	margin: auto;
+	text-align: center;
+	padding: 20px;
+	position: relative;
+}
+
+.search-suggestions {
+	width: 50%;
+	min-width: 150px;
+	position: absolute;
+	left: 100px;
+	border: 1px solid red;
+	
+}
+
+.suggestions-list {
+	padding-left: 5px;
+}
+
+.suggestions-list .suggestions-item {
+	list-style-type: none;
+	text-align: left;
+}
+
+.results-area {
+	width: 400px;
+	margin: auto;
+}
+
+.results-list {
+	width: 90%;
+}
+
+.results-list .result-item {
+	border: 1px solid blue;
+}
+
+/* Helper classes */
+
+.hidden {
+	display: none;
+}
