@@ -1,19 +1,23 @@
 $(document).ready(function() {
 	
 	var _URLbase = "https://en.wikipedia.org/w/api.php?action=opensearch&origin=*&format=json&search=";
+	var searchInput;
 	
 	var initiate = function() {
-        
+		
+        searchInput = $('[name=search-term]');
+		
         $('#search-form').submit(doSearch);
-        $('[name=search-term]').keyup(showSuggestions);
+        searchInput.keyup(showSuggestions);
+		$('.search-suggestions').focusout(function() {$(this).addClass('hidden')});
     };
 	
 	var doSearch = function(e) {
 		
 		e.preventDefault();
 		
-		var term = $('[name=search-term]').val();
-		var searchTerm = $('[name=search-term]').val();
+		var term = searchInput.val();
+		var searchTerm = searchInput.val();
 		var fullSearch = _URLbase + searchTerm;
 		
 		$.get(fullSearch, function(responseData) {
@@ -22,6 +26,7 @@ $(document).ready(function() {
 			if (searchResult.length > 0) {
 				$(".results-list").prepend("<li class='result-item'>" + searchResult[0] + "</li>");
 			};
+			searchInput.val('');
 			
 		}, 'json');
 		
@@ -29,7 +34,6 @@ $(document).ready(function() {
 	
 	var showSuggestions = function() {
 		
-		var searchInput = $('[name=search-term]');
 		var fullSearch = _URLbase + searchInput.val();
 		
 		$.get(fullSearch, function(responseData) {

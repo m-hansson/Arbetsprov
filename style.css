@@ -1,18 +1,48 @@
+/* Font family */
+@font-face {
+	font-family: iconFont;
+	src: url(fonts/fontawesome-webfont.woff);
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	background: linear-gradient (rgb(0, 40, 80), rgb(59, 87, 167));
+	background: -webkit-linear-gradient(rgb(0, 40, 80), rgb(59, 87, 167));
+	background: -o-linear-gradient(rgb(0, 40, 80), rgb(59, 87, 167));
+	background: -moz-linear-gradient(rgb(0,38,80), rgb(59,87,167));
+	font-family: Verdana, Tahoma;
+	color: white;
+}
 .header {
-	border: 1px solid black;
-	width: 40rem;
 	margin-left: auto;
 	margin-right: auto;
+	text-align: center;
 }
+
+/* Search section */
 
 .search-wrapper {
 	width: 400px;
-	border: 1px solid blue;
 	margin: auto;
 	text-align: center;
 	padding: 20px;
 	position: relative;
 }
+
+input[type=text] {
+	background-color: rgb(128, 146, 167);
+	color: rgb(159, 172, 188);
+	border: none;
+	padding: 15px;
+	
+	border-radius: 5px;
+}
+
+
 
 .search-suggestions {
 	width: 50%;
@@ -25,6 +55,7 @@
 
 .suggestions-list {
 	padding-left: 5px;
+	margin: 0 auto;
 }
 
 .suggestions-list .suggestions-item {
@@ -33,17 +64,41 @@
 	border: 1px solid green;
 }
 
+/* Results section */
+
 .results-area {
-	width: 400px;
+	width: 100%;
 	margin: auto;
 }
 
 .results-list {
-	width: 90%;
+	width: 100%;
+	background: rgb(32, 65, 106);
+	padding: 20px 0;
+	margin: auto;
 }
 
-.results-list .result-item {
-	border: 1px solid blue;
+.results-list li {
+	list-style-type: none;
+	position: relative;
+	height: 3rem;
+	line-height: 3rem;
+	padding-left: 1rem;
+}
+
+.results-list li:hover {
+	list-style-type: none;
+	background: rgba(255, 255, 255, .1);
+}
+
+.results-list li:hover:after {
+	background-color: rgb(121, 57, 83);
+	text-align: center;
+	font-family: iconFont;
+	content: "\f057";
+	position: absolute;
+	right: 0;
+	width: 3rem;
 }
 
 /* Helper classes */

@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Search Engine</title>
-    <link rel="stylesheet" href="style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<head>
+		<meta charset="utf-8">
+		<title>Search Engine</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="script.js" type="text/javascript"></script>
-  </head>
-  <body>
-    <div class="header">
-		
-	</div>
-	<div class="search-wrapper">
-		<form id="search-form">
-			<input name="search-term" autocomplete="off" type="text">
-			<input type="submit">
-		</form>
-		<div class="search-suggestions hidden">
-			<ul class="suggestions-list">
-			<ul>
+	</head>
+	<body>
+		<div class="header">
+			<img src="UI/assets/logo.svg" />
 		</div>
-	</div>
-	<div class="results-area">
-		<ul class="results-list">
-		</ul>
-	</div>
-  </body>
+		<div class="content">
+			<div class="search-wrapper">
+				<form id="search-form">
+					<input name="search-term" autocomplete="off" placeholder="Search for something..." type="text">
+					<input type="submit">
+				</form>
+				<div class="search-suggestions hidden">
+					<ul class="suggestions-list">
+					<ul>
+				</div>
+			</div>
+			<div class="results-area">
+				<ul class="results-list">
+					<li>Result</li>
+					<li>Result</li>
+				</ul>
+			</div>
+		</div>
+	</body>
 </html>
