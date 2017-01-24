@@ -1,7 +1,9 @@
 /* Font family */
 @font-face {
-	font-family: iconFont;
-	src: url(fonts/fontawesome-webfont.woff);
+	font-family: 'iconFont';
+	src: url(fonts/fontawesome-webfont.woff2) format('woff2'),
+		url(fonts/fontawesome-webfont.woff) format('woff'),
+		url(fonts/fontawesome-webfont.ttf) format('truetype');
 }
 
 html, body {
@@ -193,18 +195,6 @@ input[type=text]:focus {
 	
 }
 
-/* @tiny-min: 0em;
-@tiny-max: 19.9375em;
-
-@small-min: 20em; // 320px
-@small-max: 39.9375em;
-
-@medium-min: 40em; // 640px
-@medium-max: 63.9375em;
-
-@large-min: 64em; // 1024px
-@large-max: 74.9375em; */
-
 /* Helper classes */
 
 .hidden {
@@ -212,5 +202,5 @@ input[type=text]:focus {
 }
 
 .icon-font {
-	font-family: iconFont;
+	font-family: 'iconFont', sans-serif;
 }
