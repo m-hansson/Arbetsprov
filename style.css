@@ -169,8 +169,6 @@ input[type=text]:focus {
 	content: '\f057';
 }
 
-
-
 /* Media queries */
 
 @media screen and (min-width: 320px) {
@@ -189,10 +187,6 @@ input[type=text]:focus {
 		font-size: 13px;	
 		width: 67%;
 	}
-}
-
-@media screen and (min-width: 1024px) {
-	
 }
 
 /* Helper classes */
