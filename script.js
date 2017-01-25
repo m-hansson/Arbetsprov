@@ -43,7 +43,7 @@ $(document).ready(function() {
 			}
 		});
 		
-    }
+    };
 	
 	var doSearch = function(e) {
 		
@@ -80,7 +80,7 @@ $(document).ready(function() {
 		
 		searchInput.val('');
 		
-	}
+	};
 	
 	var showSuggestions = function() {
 		
@@ -117,7 +117,7 @@ $(document).ready(function() {
 			}
 			
 		}, 'json');
-	}
+	};
 	
 	var getTimestamp = function() {
 		var now = new Date();
@@ -128,12 +128,12 @@ $(document).ready(function() {
 		}
 		var timestamp = now.getFullYear() + '-' + month + '-' + now.getDate() + ' ' + now.getHours() + ':' + minute;
 		return timestamp;
-	}
+	};
 	
 	var cleanResponse = function(responseData) {
 		var resultsArray = responseData[1];
 		return resultsArray;
-	}
+	};
 	
 	initiate();
 	
