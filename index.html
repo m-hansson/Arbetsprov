@@ -5,27 +5,27 @@
 		<title>Search Engine</title>
 		<link rel="stylesheet" href="style.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="script.js" type="text/javascript"></script>
+		<script src="script.js"></script>
 	</head>
 	<body>
-		<div class="header">
-			<img src="UI/assets/logo.svg" />
-		</div>
-		<div class="content">
-			<div class="search-wrapper">
+		<header class="header" role="banner">
+			<img src="UI/assets/logo.svg" alt="SearQ logo"/>
+		</header>
+		<main class="content" role="main">
+			<section class="search-wrapper" role="search" aria-label="SearchForm">
 				<form id="search-form">
-					<input type="submit"><span class="icon-font search-icon" title="Press here or Enter key to search"></span>
-					<input name="search-term" autocomplete="off" placeholder="Search for something..." type="text">
+					<input type="submit"><span class="icon-font search-icon" title="Press the search icon or Enter key to search"></span>
+					<label for="search-input" class="visuallyhidden">Search term</label><input name="search-term" id="search-input" autocomplete="off" placeholder="Search for something..." type="text">
 				</form>
 				<div class="search-suggestions">
 					<ul class="suggestions-list">
-					<ul>
+					</ul>
 				</div>
-			</div>
-			<div class="results-area">
+			</section>
+			<section class="results-area" aria-label="SearchResults">
 				<ul class="results-list hidden">
 				</ul>
-			</div>
-		</div>
+			</section>
+		</main>
 	</body>
 </html>

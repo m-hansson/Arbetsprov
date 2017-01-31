@@ -6,6 +6,13 @@
 		url(fonts/fontawesome-webfont.ttf) format('truetype');
 }
 
+/* Compatibility for browsers */
+header, main, section {
+	display: block;
+}
+
+/* Page styling */
+
 html, body {
 	height: 100%;
 }
@@ -154,7 +161,8 @@ input[type=text]:focus {
 	background: rgba(255, 255, 255, .1);
 }
 
-.results-list li:hover .remove {
+.results-list li:hover .remove,
+.results-list li:focus .remove {
 	display: block;
 	background-color: rgb(121, 57, 83);
 	text-align: center;
@@ -166,7 +174,8 @@ input[type=text]:focus {
 	cursor: pointer;
 }
 
-.results-list li:hover .remove:after {
+.results-list li:hover .remove:after,
+.results-list li:focus .remove:after {
 	content: '\f057';
 }
 
@@ -194,6 +203,40 @@ input[type=text]:focus {
 
 .hidden {
 	display: none;
+}
+
+/*
+ * Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+}
+
+/*
+ * Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
 }
 
 .icon-font {

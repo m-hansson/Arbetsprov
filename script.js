@@ -67,8 +67,8 @@ $(document).ready(function() {
 				//Print item and add remove functionality to button
 				var newItem = "<li class='result-item'>" +
 								"<span class='result-term'>" + searchResult[0] + "</span>" + 
-								"<span class='timestamp'>" + timestamp + "</span>" + 
-								"<span class='icon-font remove' title='Delete search'></span></li>";
+								"<time class='timestamp'>" + timestamp + "</time>" + 
+								"<span class='icon-font remove' title='Delete search' role='button'></span></li>";
 				$(".results-list").prepend(newItem);
 				$(".results-list").find('.remove').first().click(function() {
 					$(this).parent().remove();
