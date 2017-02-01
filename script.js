@@ -21,12 +21,11 @@ $(document).ready(function() {
 		
 		$(document).keypress(function(e) {
 			if (e.which == 13) {
-				console.log(e);
 				if (e.target && e.target.className == 'suggestions-item') {
 					$(document.activeElement).click();
 				}
-				else if (e.target && e.target.className == 'remove') {
-					$(document.activeElement).click();
+				else if (e.target && e.target.className == 'result-item') {
+					$(document.activeElement).children('.remove').click();
 				}
 				else {
 					submitButton.click();
@@ -36,7 +35,6 @@ $(document).ready(function() {
 		});
 		
 		//Hide search suggestions after input loses focus. Slight delay so that suggestions are clickable
-
 		searchInput.blur( function(e) { 
 			if (!e.relatedTarget || e.relatedTarget.className != 'suggestions-item') {
 				setTimeout(function(){ 
@@ -44,7 +42,6 @@ $(document).ready(function() {
 				}, 200);
 			}
 		});
-		//searchSuggestions.focusout(function() { console.log('Boop too'); });
 		
 
 		$(".results-list").on('DOMNodeInserted', function(e) {
@@ -85,7 +82,7 @@ $(document).ready(function() {
 				var newItem = "<li class='result-item' tabindex='0'>" +
 								"<span class='result-term'>" + searchResult[0] + "</span>" + 
 								"<time class='timestamp'>" + timestamp + "</time>" + 
-								"<span class='icon-font remove' title='Delete search' role='button' tabindex='0'></span></li>";
+								"<span class='icon-font remove' title='Delete search' role='button'></span></li>";
 				$(".results-list").prepend(newItem);
 				$(".results-list").find('.remove').first().click(function() {
 					$(this).parent().remove();
@@ -126,7 +123,6 @@ $(document).ready(function() {
 					searchInput.val($(this).text());
 					searchSuggestions.addClass('hidden');
 				}).keydown(function(e) {
-					//If tab button pressed and child is not last stop propagation. Should be fine, yeah.
 					if (e.which == '9' && !e.currentTarget.nextSibling) {
 						searchSuggestions.addClass('hidden');
 					}
