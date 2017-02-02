@@ -45,7 +45,7 @@ body {
 	text-align: center;
 }
 
-input[type=text] {
+input[type=search] {
 	background-color: rgba(255, 255, 255, .5);
 	color: white;
 	border: none;
@@ -57,7 +57,7 @@ input[type=text] {
     box-sizing: border-box;
 }
 
-input[type=text]:focus {
+input[type=search]:focus {
 	background-color: rgba(255, 255, 255, .8);
 	outline: none;
 }
